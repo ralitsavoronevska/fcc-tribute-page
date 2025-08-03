@@ -31,7 +31,7 @@
     <!-- Preload Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="./img/hero.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="img/hero.webp" as="image" type="image/webp" fetchpriority="high">
 
     <!-- Main stylesheets: Bootstrap and my own styles -->
     <link rel="stylesheet" href="purged-bootstrap.min.css" fetchpriority="high">
@@ -56,12 +56,14 @@
       <div class="hero-container text-center center rounded-4 m-0 p-0">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-12">
-            <div class="card hero-card center rounded-4 border-0 mx-auto">
-              <img src="./img/hero.webp" alt="Brendan Eich" class="card-img-top center rounded-circle my-2">
+            <div class="card hero-card center rounded-4 border-0 mx-auto" id="img-div">
+              <img src="img/hero.webp" alt="Brendan Eich" class="d-block img-fluid card-img-top rounded-circle my-2" id="image">
               <div class="card-body p-0">
-                <h1 class="fs-2 fw-bold text-body-emphasis mb-0">Brendan Eich</h1>
-                <p class="card-text lead mb-2"><a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a></p>
-                <div class="hero-caption center p-3">
+                <h1 class="fs-2 fw-bold text-body-emphasis mb-0" id="title">Brendan Eich</h1>
+                <p class="card-text lead mb-2">
+                  <a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a>
+                </p>
+                <div class="hero-caption center p-3" id="img-caption">
                   <p class="lead fw-normal p-0 m-0">
                     <span class="fw-bold">Brendan Eich</span> is an American technologist and creator of the <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a><sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="ABC News: Mozilla CEO Resigns After Calif. Gay Marriage Ban Campaign Donation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[1]</a></sup>, the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a> and the <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation</a>, and served as the Mozilla Corporation's <a href="https://en.wikipedia.org/wiki/Chief_technology_officer" title="Chief Technical Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Chief Technical Officer</a> and briefly its <a href="https://en.wikipedia.org/wiki/Chief_executive_officer" title="Chief Executive Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Chief Executive Officer</a><sup><a href="https://www.vox.com/2014/4/3/11625258/mozilla-co-founder-brendan-eich-resigns-as-ceo-and-also-from" title="Swisher, Kara for Recode, April 3, 2014: Mozilla Co-Founder Brendan Eich Resigns as CEO, Leaves Foundation Board" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[2]</a></sup>. He is the CEO of <a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave Software" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Brave Software</a><sup><a href="https://www.cnet.com/news/mystery-startup-from-ex-mozilla-ceo-aims-to-go-where-tech-titans-wont/" title="CNET, CBS Interactive. 17 November 2015: Mystery startup from ex-Mozilla CEO aims to go where tech titans won't" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[3]</a></sup>.
                   </p>
@@ -84,7 +86,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Birth</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">July 4th, 1961</span>
                 </p>
               </div>
@@ -101,7 +103,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Early Education</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">1979</span>
                 </p>
               </div>
@@ -118,7 +120,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Master's Degree</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">1985</span>
                 </p>
               </div>
@@ -135,7 +137,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Career start</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">1985</span>
                 </p>
               </div>
@@ -153,7 +155,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Netscape && JavaScript</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">1995</span>
                 </p>
               </div>
@@ -170,7 +172,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">1998</span>
                 </p>
               </div>
@@ -188,7 +190,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">1999</span>
                 </p>
               </div>
@@ -205,7 +207,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">July 2003</span>
                 </p>
               </div>
@@ -222,7 +224,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">August 2005</span>
                 </p>
               </div>
@@ -239,7 +241,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">2011</span>
                 </p>
               </div>
@@ -256,7 +258,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">March 24th, 2014</span>
                 </p>
               </div>
@@ -273,7 +275,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Brave Software</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">2016</span>
                 </p>
               </div>
@@ -291,7 +293,7 @@
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Brave Software</h2>
                 <p class="fw-bold mb-0">
-                  <img src="./img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" class="clock-icon" alt="clock history icon">
                   <span class="small ml-2">May 31st, 2017</span>
                 </p>
               </div>
@@ -318,7 +320,7 @@
       <!-- end of blockquote section -->
 
       <!-- start of social links section -->
-      <section class="socials-container center flex-column text-center mb-0 pt-4">
+      <section class="socials-container center flex-column text-center mb-0 pt-4" id="tribute-info">
         <h3 class="fs-2 fw-bold">Want to know more about him?</h3>
         <div class="social-links center my-5">
 
@@ -359,7 +361,7 @@
 
         </div>
         
-        <h3 class="wiki-ref fs-2 fw-bold">Read more about him on <a href="https://en.wikipedia.org/wiki/Brendan_Eich" class="wiki-link fw-bold text-decoration-none" target="_blank" rel="noopener">Wikipedia</a>.</h3>
+        <h3 class="wiki-ref fs-2 fw-bold">Read more about him on <a href="https://en.wikipedia.org/wiki/Brendan_Eich" class="wiki-link fw-bold text-decoration-none" id="tribute-link" target="_blank" rel="noopener">Wikipedia</a>.</h3>
       </section>
       <!-- end of social links section -->
 
