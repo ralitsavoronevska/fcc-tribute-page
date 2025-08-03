@@ -31,8 +31,7 @@
     <!-- Preload Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="./img/hero-small.webp" as="image" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
-    <link rel="preload" href="./img/hero-large.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" href="./img/hero.webp" as="image" type="image/webp" fetchpriority="high">
 
     <!-- Main stylesheets: Bootstrap and my own styles -->
     <link rel="stylesheet" href="purged-bootstrap.min.css" fetchpriority="high">
@@ -47,28 +46,32 @@
 
   <body>
 
-    <div class="scrollToTop center rounded-el position-fixed">
+    <div class="scrollToTop center rounded-el position-fixed rounded-circle">
       <img src="img/svgs/home-btn.svg" id="home-btn" alt="Home button">
     </div>
 
     <main id="main" class="p-3">
-      <div class="hero-container text-center rounded-4 m-0"> 
-        <div class="img-container center flex-column p-3 pb-2">
-          <img id="hero-img-small" width="225" height="225" src="./img/hero-small.webp"
-            alt="Brendan Eich" title="Brendan Eich, official Mozilla Foundation photograph, August 21, 2012">
-          <img id="hero-img-large" width="300" height="300" src="./img/hero-large.webp"
-            alt="Brendan Eich" title="Brendan Eich, official Mozilla Foundation photograph, August 21, 2012">
-        </div>
-        <div class="col-lg-6 mx-auto"> 
-          <h1 class="fs-2 fw-bold text-body-emphasis mb-0">Brendan Eich</h1>
-          <p class="lead mb-2"><a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a></p> 
-        </div>
-        <div class="hero-caption center p-3">
-          <p class="lead container fw-normal p-0 m-0">
-            <span class="fw-bold">Brendan Eich</span> is an American technologist and creator of the <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a><sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="ABC News: Mozilla CEO Resigns After Calif. Gay Marriage Ban Campaign Donation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[1]</a></sup>, the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a> and the <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation</a>, and served as the Mozilla Corporation's <a href="https://en.wikipedia.org/wiki/Chief_technology_officer" title="Chief Technical Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Chief Technical Officer</a> and briefly its <a href="https://en.wikipedia.org/wiki/Chief_executive_officer" title="Chief Executive Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Chief Executive Officer</a><sup><a href="https://www.vox.com/2014/4/3/11625258/mozilla-co-founder-brendan-eich-resigns-as-ceo-and-also-from" title="Swisher, Kara for Recode, April 3, 2014: Mozilla Co-Founder Brendan Eich Resigns as CEO, Leaves Foundation Board" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[2]</a></sup>. He is the CEO of <a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave Software" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Brave Software</a><sup><a href="https://www.cnet.com/news/mystery-startup-from-ex-mozilla-ceo-aims-to-go-where-tech-titans-wont/" title="CNET, CBS Interactive. 17 November 2015: Mystery startup from ex-Mozilla CEO aims to go where tech titans won't" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[3]</a></sup>.
-          </p>
+
+      <!-- start of hero section -->
+      <div class="hero-container text-center center rounded-4 m-0 p-0">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-12">
+            <div class="card hero-card center rounded-4 border-0 mx-auto">
+              <img src="./img/hero.webp" alt="Brendan Eich" class="card-img-top center rounded-circle my-2">
+              <div class="card-body p-0">
+                <h1 class="fs-2 fw-bold text-body-emphasis mb-0">Brendan Eich</h1>
+                <p class="card-text lead mb-2"><a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a></p>
+                <div class="hero-caption center p-3">
+                  <p class="lead fw-normal p-0 m-0">
+                    <span class="fw-bold">Brendan Eich</span> is an American technologist and creator of the <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a><sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="ABC News: Mozilla CEO Resigns After Calif. Gay Marriage Ban Campaign Donation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[1]</a></sup>, the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a> and the <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation</a>, and served as the Mozilla Corporation's <a href="https://en.wikipedia.org/wiki/Chief_technology_officer" title="Chief Technical Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Chief Technical Officer</a> and briefly its <a href="https://en.wikipedia.org/wiki/Chief_executive_officer" title="Chief Executive Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Chief Executive Officer</a><sup><a href="https://www.vox.com/2014/4/3/11625258/mozilla-co-founder-brendan-eich-resigns-as-ceo-and-also-from" title="Swisher, Kara for Recode, April 3, 2014: Mozilla Co-Founder Brendan Eich Resigns as CEO, Leaves Foundation Board" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[2]</a></sup>. He is the CEO of <a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave Software" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Brave Software</a><sup><a href="https://www.cnet.com/news/mystery-startup-from-ex-mozilla-ceo-aims-to-go-where-tech-titans-wont/" title="CNET, CBS Interactive. 17 November 2015: Mystery startup from ex-Mozilla CEO aims to go where tech titans won't" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[3]</a></sup>.
+                  </p>
+                </div> 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- end of hero section -->
 
       <!-- start of timeline -->
       <div class="timeline-container py-5">
@@ -76,7 +79,7 @@
 
           <!-- Timeline item 1 : July 4th, 1961 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Birth</h2>
@@ -93,7 +96,7 @@
 
           <!-- Timeline item 2 : 1979 -->
           <div class="timeline-content position-relative right-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-right" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Early Education</h2>
@@ -110,7 +113,7 @@
 
           <!-- Timeline item 3 : 1985 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Master's Degree</h2>
@@ -127,7 +130,7 @@
 
           <!-- Timeline item 4 : 1985 -->
           <div class="timeline-content position-relative right-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-right" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Career start</h2>
@@ -145,7 +148,7 @@
 
           <!-- Timeline item 5 : 1995 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Netscape && JavaScript</h2>
@@ -162,7 +165,7 @@
 
           <!-- Timeline item 6 : 1998 -->
           <div class="timeline-content position-relative right-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-right" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
@@ -180,7 +183,7 @@
           
           <!-- Timeline item 7 : 1999 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
@@ -197,7 +200,7 @@
 
           <!-- Timeline item 8 : 2003 -->
           <div class="timeline-content position-relative right-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-right" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
@@ -214,7 +217,7 @@
 
           <!-- Timeline item 9 : 2005 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
@@ -231,7 +234,7 @@
 
           <!-- Timeline item 10 : 2011 -->
           <div class="timeline-content position-relative right-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-right" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
@@ -248,7 +251,7 @@
 
           <!-- Timeline item 11 : 2014 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
@@ -265,7 +268,7 @@
 
           <!-- Timeline item 12 : 2016 -->
           <div class="timeline-content position-relative right-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-right" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Brave Software</h2>
@@ -283,7 +286,7 @@
 
           <!-- Timeline item 13 : 2017 -->
           <div class="timeline-content position-relative left-side">
-            <div class="timeline-dot position-absolute"></div>
+            <div class="timeline-dot position-absolute rounded-circle"></div>
             <div class="card fade-in-left" data-scroll>
               <div class="card-header d-flex align-items-center justify-content-between px-2">
                 <h2 class="fw-bold small mb-0">Brave Software</h2>
@@ -302,6 +305,7 @@
       </div>
       <!-- end of timeline -->
 
+      <!-- start of blockquote section -->
       <blockquote cite="https://www.azquotes.com/author/36232-Brendan_Eich" class="center flex-column mx-auto p-3 mb-5">
         <p class="fs-2 fw-bold fst-italic position-relative text-center px-5">
           <img src="img/svgs/quote-left.svg" class="quote-left position-absolute" alt="left quote icon">
@@ -311,40 +315,42 @@
         </p>
         <cite><span class="fs-2 fst-normal fw-bold">Brendan Eich</span></cite>
       </blockquote>
+      <!-- end of blockquote section -->
 
+      <!-- start of social links section -->
       <section class="socials-container center flex-column text-center mb-0 pt-4">
         <h3 class="fs-2 fw-bold">Want to know more about him?</h3>
         <div class="social-links center my-5">
 
-          <div class="website-link">
+          <div class="website-link rounded-circle">
             <a href="https://brendaneich.com/" title="Brendan Eich's Official Website" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
               <img src="img/svgs/link-dark.svg" class="link-dark" alt="dark link icon">
               <img src="img/svgs/link-light.svg" class="link-light" alt="light link icon">
             </a>
           </div>
 
-          <div class="fb-logo">
+          <div class="fb-logo rounded-circle">
             <a href="https://www.facebook.com/brendan.eich.1" title="Brendan Eich's Facebook Page" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
               <img src="img/svgs/fb-logo-dark.svg" class="fb-logo-dark" alt="Facebook dark logo">
               <img src="img/svgs/fb-logo-light.svg" class="fb-logo-light" alt="Facebook light logo">
             </a>
           </div>
 
-          <div class="twitter-logo">
+          <div class="twitter-logo rounded-circle">
             <a href="https://twitter.com/BrendanEich" title="Brendan Eich's Twitter" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
               <img src="img/svgs/twitter-dark.svg" class="twitter-dark" alt="Twitter dark logo">
               <img src="img/svgs/twitter-light.svg" class="twitter-light" alt="Twitter light logo">
             </a>
           </div>
 
-          <div class="instagram-logo">
+          <div class="instagram-logo rounded-circle">
             <a href="https://www.instagram.com/brendan.eich/" title="Brendan Eich's Instagram" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
               <img src="img/svgs/instagram-dark.svg" class="instagram-dark" alt="Instagram dark logo">
               <img src="img/svgs/instagram-light.svg" class="instagram-light" alt="Instagram light logo">
             </a>
           </div>
 
-          <div class="mastodon-logo">
+          <div class="mastodon-logo rounded-circle">
             <a href="https://mastodon.social/@BrendanEich" title="Brendan Eich's Mastodon" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
               <img src="img/svgs/mastodon-dark.svg" class="mastodon-dark" alt="Mastodon dark logo">
               <img src="img/svgs/mastodon-light.svg" class="mastodon-light" alt="Mastodon light logo">
@@ -355,6 +361,7 @@
         
         <h3 class="wiki-ref fs-2 fw-bold">Read more about him on <a href="https://en.wikipedia.org/wiki/Brendan_Eich" class="wiki-link fw-bold text-decoration-none" target="_blank" rel="noopener">Wikipedia</a>.</h3>
       </section>
+      <!-- end of social links section -->
 
     </main>
 
