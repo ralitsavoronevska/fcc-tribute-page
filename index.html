@@ -47,13 +47,44 @@
     <link rel="stylesheet" href="css/styles-small.css">
     <link rel="stylesheet" href="css/styles-large.css" media="(min-width: 768px)">
 
+    <!-- Inline critical CSS for hero and LCP elements -->
+    <style>
+      .fst-normal { font-style: normal !important; }
+      .fw-normal { font-weight: 400 !important; }
+      .position-fixed { position: fixed !important; }
+      .rounded-circle { border-radius: 50% !important; }
+      .p-3 { padding: 1rem !important; }
+      .text-center { text-align: center !important; }
+      .rounded-4 { border-radius: 1rem !important; }
+      .border-0 { border: 0 !important; }
+      .w-100 { width: 100% !important; }
+      .mw-100 { max-width: 100% !important; }
+      .m-0 { margin: 0 !important; }
+      .p-0 { padding: 0 !important; }
+      .mx-auto { margin-right: auto !important; margin-left: auto !important; }
+      .d-block { display: block !important; }
+      .my-2 { margin-top: .5rem !important; margin-bottom: .5rem !important; }
+      .fs-2 { font-size: calc(1.325rem + 0.9vw) !important; }
+      @media (min-width: 1200px) {
+        .fs-2 { font-size: 2rem !important; }
+      }
+      .fw-bold { font-weight: 700 !important; }
+      .mb-0 { margin-bottom: 0 !important; }
+      .lead { font-size: 1.25rem; font-weight: 300; }
+      .mb-2 { margin-bottom: .5rem !important; }
+      .text-decoration-none { text-decoration: none !important; }
+      .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+      .position-relative { position: relative !important; }
+      .position-absolute { position: absolute !important; }
+    </style>
+
     <!-- noscript fallbacks -->
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
     </noscript>
   </head>
 
-  <body>
+  <body class="fst-normal fw-normal">
 
     <div class="scrollToTop rounded-el center position-fixed rounded-circle">
       <img src="img/svgs/home-btn.svg" width="32" height="32" id="home-btn" alt="Home button">
@@ -62,22 +93,20 @@
     <main id="main" class="p-3">
 
       <!-- start of hero section -->
-      <div class="hero-container text-center center rounded-4 m-0 p-0">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-12">
-            <div class="card hero-card center rounded-4 border-0 mx-auto" id="img-div">
-              <img src="img/hero.webp" width="225" height="225" class="d-block img-fluid rounded-circle my-2" id="image" alt="Brendan Eich" >
-              <div class="card-body p-0">
-                <h1 class="fs-2 fw-bold text-body-emphasis mb-0" id="title">Brendan Eich</h1>
-                <p class="lead mb-2">
-                  <a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a>
+      <div class="hero-container text-center rounded-4 w-100 mw-100 m-0 p-0">
+        <div class="row mx-auto">
+          <div class="card hero-card center rounded-4 border-0 w-100 mw-100 mx-auto p-0" id="img-div">
+            <img src="img/hero.webp" width="180" height="180" class="d-block rounded-circle my-2" id="image" alt="Brendan Eich">
+            <div class="card-body w-100 mw-100 p-0">
+              <h1 class="fs-2 fw-bold mb-0">Brendan Eich</h1>
+              <p class="lead mb-2">
+                <a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a>
+              </p>
+              <div class="hero-caption center p-3" id="img-caption">
+                <p class="lead fw-normal p-0 m-0">
+                  <span class="fw-bold">Brendan Eich</span> is an American computer programmer and technology executive. He created the <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript" class="fw-bold text-decoration-none" target="_blank" rel="noopener">JavaScript</a> programming language and co-founded the <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a> project <sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="ABC News: Mozilla CEO Resigns After Calif. Gay Marriage Ban Campaign Donation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[1]</a></sup>, the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a> and the <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation.</a>
                 </p>
-                <div class="hero-caption center p-3" id="img-caption">
-                  <p class="lead fw-normal p-0 m-0">
-                    <span class="fw-bold">Brendan Eich</span> is an American computer programmer and technology executive. He created the <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript" class="fw-bold text-decoration-none" target="_blank" rel="noopener">JavaScript</a> programming language and co-founded the <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a> project <sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="ABC News: Mozilla CEO Resigns After Calif. Gay Marriage Ban Campaign Donation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[1]</a></sup>, the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a> and the <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation.</a>
-                  </p>
-                </div> 
-              </div>
+              </div> 
             </div>
           </div>
         </div>
