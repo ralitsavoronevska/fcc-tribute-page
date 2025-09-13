@@ -35,19 +35,15 @@
 
     <!-- Preload Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v36/1Ptsg8zYS_SKggPNyCg4TYFqL_KWxQ.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v36/1Ptsg8zYS_SKggPNyCg4TYFqL_KWxQ.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v37/1Ptsg8zYS_SKggPNyCg4TYFqL_KWxQ.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v36/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v36/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2" as="font" type="font/woff2" crossorigin> -->
     <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v37/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-    <!-- Preload hero image -->
-    <link rel="preload" href="img/hero.webp" as="image" type="image/webp" fetchpriority="high">
-
     <!-- Main stylesheets: Bootstrap and my own styles -->
     <link rel="stylesheet" href="purged-bootstrap.min.css" fetchpriority="high">
-    <link rel="stylesheet" href="css/styles-general.css">
-    <link rel="stylesheet" href="css/styles-small.css" media="(max-width: 767px)">
+    <link rel="stylesheet" href="css/styles-small.css">
     <link rel="stylesheet" href="css/styles-large.css" media="(min-width: 768px)">
 
     <!-- Inline critical CSS for hero and LCP elements -->
@@ -57,6 +53,9 @@
       .m-0 { margin: 0 !important; }
       .p-0 { padding: 0 !important; }
       .lead { font-size: 1.25rem; }
+      @media (max-width: 767px) {
+        .hero-card.lead { font-size: 1rem; }
+      }
     </style>
 
     <!-- noscript fallbacks -->
@@ -68,7 +67,7 @@
   <body class="fst-normal fw-normal">
 
     <div class="scrollToTop center position-fixed rounded-circle">
-      <img src="img/svgs/home-btn.svg" width="32" height="32" id="home-btn" alt="Home button">
+      <img src="img/svgs/home-btn.svg" width="32" height="32" id="home-btn" alt="Home button" loading="lazy">
     </div>
 
     <main id="main" class="mx-auto p-3">
@@ -77,7 +76,7 @@
       <div class="hero-container text-center rounded-4 w-100 mw-100 m-0 p-0">
         <div class="row mx-auto">
           <div class="card hero-card center rounded-4 border-0 w-100 mw-100 mx-auto p-0" id="img-div">
-            <img src="img/hero.webp" width="180" height="180" class="d-block rounded-circle my-2" id="image" alt="Brendan Eich">
+            <img src="img/hero.webp" width="180" height="180" class="d-block rounded-circle my-2" id="image" alt="Brendan Eich" loading="eager">
             <div class="card-body w-100 mw-100 p-0">
               <h1 class="fs-2 fw-bold mb-0" id="title">Brendan Eich</h1>
               <p class="lead mb-2">
@@ -105,11 +104,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Birth</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">July 4th, 1961</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">Born in Pittsburgh, Pennsylvania, U.S. Brendan Eich grew up in Palo Alto.</p>
               </div>
             </div>
@@ -122,11 +121,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Early Education</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">1979</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">He attended <a href="https://en.wikipedia.org/wiki/Ellwood_P._Cubberley_High_School" title="Ellwood P. Cubberley High School" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Ellwood P. Cubberley High School</a>, graduating in the class of 1979. Eich received his bachelor's degree in mathematics and computer science at <a href="https://en.wikipedia.org/wiki/Santa_Clara_University" title="Santa Clara University" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Santa Clara University</a>.</p>
               </div>
             </div>
@@ -139,11 +138,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Master's Degree</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">1985</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">He received his master's degree in 1985 from the <a href="https://en.wikipedia.org/wiki/University_of_Illinois_at_Urbana%E2%80%93Champaign" title="University of Illinois at Urbana-Champaign" class="fw-bold text-decoration-none" target="_blank" rel="noopener">University of Illinois at Urbana-Champaign</a>.</p>
               </div>
             </div>
@@ -156,11 +155,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Career start</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">1985</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">Eich started his career at <a href="https://en.wikipedia.org/wiki/Silicon_Graphics" title="Silicon Graphics" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Silicon Graphics</a>, working for 7 years on operating system and network code. He then worked for 3 years at <a href="https://en.wikipedia.org/wiki/MicroUnity" title="MicroUnity Systems Engineering" class="fw-bold text-decoration-none" target="_blank" rel="noopener">MicroUnity Systems Engineering</a> writing <a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)" title="microkernel" class="fw-bold text-decoration-none" target="_blank" rel="noopener">microkernel</a> and <a href="https://en.wikipedia.org/wiki/Digital_signal_processor" title="Digital signal processor" class="fw-bold text-decoration-none" target="_blank" rel="noopener">DSP</a> code, and doing the first <a href="https://en.wikipedia.org/wiki/MIPS_architecture"
                   title="MIPS architecture" class="fw-bold text-decoration-none" target="_blank" rel="noopener">MIPS</a> <a href="https://en.wikipedia.org/wiki/R4000" title="R4000" class="fw-bold text-decoration-none" target="_blank" rel="noopener">R4000</a> port of <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection" class="fw-bold text-decoration-none" target="_blank" rel="noopener">GCC</a>.</p>
               </div>
@@ -174,11 +173,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Netscape && JavaScript</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">1995</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">He started work at <a href="https://en.wikipedia.org/wiki/Netscape" title="Netscape" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Netscape Communications Corporation</a> in April 1995. Eich originally joined intending to put <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Scheme</a> "in the browser"<sup><a href="https://books.google.bg/books?id=3b40AwAAQBAJ&pg=PT32&redir_esc=y#v=onepage&q&f=false" title="Saternos, Casimir (2014-03-28). Client-Server Web Apps with JavaScript and Java." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[4]</a></sup>, but his Netscape superiors insisted that the language’s syntax resemble that of <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" title="Java" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Java</a>. The result was a language that had much of the functionality of Scheme, the object orientation of Self, and the syntax of Java. The first version was completed in ten days in order to accommodate the Navigator 2.0 Beta release schedule<sup><a href="https://www.computer.org/csdl/magazine/co/2012/02/mco2012020007/13rRUy08MzA" title="Severance, Charles (February 2012). 'JavaScript: Designing a Language in 10 Days' (PDF). Computer." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[5]</a></sup>, and was called Mocha, but renamed LiveScript in September 1995 and later JavaScript in the same month<sup><a href="https://www.quirksmode.org/js/intro.html" title="JavaScript: General introduction" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[6]</a></sup>. Eich continued to oversee the development of <a href="https://en.wikipedia.org/wiki/SpiderMonkey" title="SpiderMonkey" class="fw-bold text-decoration-none" target="_blank" rel="noopener">SpiderMonkey</a>, the specific implementation of JavaScript in Navigator<sup><a href="https://brendaneich.com/2011/06/new-javascript-engine-module-owner/" title="Eich, Brendan (June 21, 2011). 'New JavaScript Engine Module Owner'. BrendanEich.com." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[7]</a></sup>.</p>
               </div>
             </div>
@@ -191,11 +190,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">1998</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">In early 1998, Eich co-founded the
                 <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a> project with <a href="https://en.wikipedia.org/wiki/Jamie_Zawinski" title="Jamie Zawinski" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Jamie Zawinski</a> and others, creating the mozilla.org website, which was meant to manage open-source contributions to the Netscape source code. He served as Mozilla's chief <a href="https://en.wikipedia.org/wiki/Systems_architect" title="Systems architect" class="fw-bold text-decoration-none" target="_blank" rel="noopener">architect</a>.</p>
               </div>
@@ -209,11 +208,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">1999</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0"><a href="https://en.wikipedia.org/wiki/AOL" title="AOL" class="fw-bold text-decoration-none" target="_blank" rel="noopener">AOL</a> bought Netscape in 1999.</p>
               </div>
             </div>
@@ -226,11 +225,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">July 2003</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">After AOL shut down the Netscape browser unit, Eich helped spin out the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a><sup><a href="https://www-archive.mozilla.org/press/mozilla-2005-08-03.html" title="Mozilla Foundation Forms New Organization to Further the Creation of Free, Open Source Internet Software, Including the Award-Winning Mozilla Firefox Browser. Mozilla Foundation. 2005-08-03. Retrieved 2011-02-12. Brendan Eich, a co-founder and long-time technical leader of the Mozilla project, will become the chief technical officer of the Mozilla Corporation." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[9]</a></sup>.</p>
               </div>
             </div>
@@ -243,11 +242,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">August 2005</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">After serving as Lead Technologist and as a member of the Board of Directors of the Mozilla Foundation, Eich became <a href="https://en.wikipedia.org/wiki/Chief_technology_officer" title="Chief Technology Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">CTO</a> of the newly founded <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation</a>, meant to be the Mozilla Foundation's for-profit arm.</p>
               </div>
             </div>
@@ -260,11 +259,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">2011</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">Eich continued to "own" the Mozilla SpiderMonkey module, its JavaScript engine, until he passed on the ownership of it in 2011.</p>
               </div>
             </div>
@@ -277,11 +276,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">March 24th, 2014</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">Eich was promoted to CEO of Mozilla Corporation<sup><a href="https://blog.mozilla.org/blog/2014/03/24/mozilla-leadership-changes/" title="'Leadership Changes' (blog). Mozilla. March 24, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[10]</a></sup>. <a href="https://en.wikipedia.org/wiki/Gary_Kovacs" title="Gary Kovacs" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Gary Kovacs</a>, <a href="https://en.wikipedia.org/wiki/John_Lilly_(computer_scientist)" title="John Lilly" class="fw-bold text-decoration-none" target="_blank" rel="noopener">John Lilly</a> and <a href="https://en.wikipedia.org/wiki/Ellen_Siminoff" title="Ellen Siminoff" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Ellen Siminoff</a> resigned from the Mozilla board prior to the appointment, some anonymously expressing disagreements with Eich's strategy and their desire for a CEO with experience in the mobile industry<sup><a href="https://arstechnica.com/information-technology/2014/03/three-mozilla-board-members-including-two-former-ceos-step-down/" title="Machkovech, Sam (March 28, 2014). 'Three Mozilla board members—including former CEOs—step down [Updated]'. Ars Technica." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[14]</a></sup>. Some employees of Mozilla Foundation (a separate organization from Mozilla Corporation) tweeted calls for his resignation, with reference to his donation of $1,000 to <a href="https://en.wikipedia.org/wiki/2008_California_Proposition_8" title="2008 California Proposition 8" class="fw-bold text-decoration-none" target="_blank" rel="noopener">California Proposition 8</a>, which called for the banning of <a href="https://en.wikipedia.org/wiki/Same-sex_marriage_in_California" title="Same-sex marriage in California" class="fw-bold text-decoration-none" target="_blank" rel="noopener">same-sex marriage in California</a><sup><a href="https://blog.mozilla.org/blog/2014/04/03/brendan-eich-steps-down-as-mozilla-ceo/" title="Baker, Mitchell (April 3, 2014). 'Brendan Eich Steps Down as Mozilla CEO'. The Mozilla Blog." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[15]</a></sup><sup><a href="https://blog.mozilla.org/blog/2014/04/05/faq-on-ceo-resignation/" title="'FAQ on CEO Resignation'. Mozilla. April 5, 2014. Retrieved April 6, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[16]</a></sup>.Eich stood by his decision to fund the campaign, but wrote on his blog that he was sorry for “causing pain” and pledged to promote equality at Mozilla<sup><a href="https://brendaneich.com/2014/03/inclusiveness-at-mozilla/" title="'Brendan Eich'. brendaneich.com." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[17]</a></sup>. Some of the activists created an online campaign against Eich, with online dating site <a href="https://en.wikipedia.org/wiki/OkCupid" title="OkCupid" class="fw-bold text-decoration-none" target="_blank" rel="noopener">OkCupid</a> automatically displaying a message to Firefox users with information about Eich's donation, and suggesting that users switch to a different browser (though giving them a link to continue with Firefox)<sup><a href="https://notices.californiatimes.com/gdpr/latimes.com/" title="Netburn, Deborah (2012-04-04). 'Brendan Eich's Prop. 8 contribution gets Twittersphere buzzing'. LA Times. Retrieved 2012-04-17." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[18]</a></sup><sup><a href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/online-dating-site-okcupid-calls-for-firefox-boycott-to-protest-at-anti-gay-marriage-boss-9226904.html" title="Johnston, Ian (April 1, 2014). 'OkCupid calls for Firefox boycott to protest anti-gay marriage CEO Brendan Eich'. Independent. Retrieved June 5, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[19]</a></sup><sup><a href="https://www.advocate.com/business/technology/2014/03/26/mozilla-ceo-responds-antigay-allegations" title="Byrdum, Sunnivie (March 26, 2014). 'OkCupid calls for Firefox boycott to protest anti-gay marriage CEO Brendan Eich'. The Advocate." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[20]</a></sup>. Others at the Mozilla Corporation spoke out on their blogs in his favor<sup><a href="https://arstechnica.com/business/2014/03/mozilla-employees-to-brendan-eich-step-down/" title="Machkovech, Sam (March 27, 2014). 'Mozilla employees tell Brendan Eich he needs to 'step down''. Ars Technica. Retrieved March 28, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[21]</a></sup><sup><a href="https://subfictional.com/on-brendan-eich-as-ceo-of-mozilla/" title="Koehler, Christie (March 24, 2014). 'On Brendan Eich as CEO of Mozilla'. Subfictional Studios. Retrieved April 7, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[22]</a></sup>. Board members wanted him to stay in the company in a different role<sup><a href="https://www.theregister.co.uk/Print/2014/04/08/mozilla_anti_gay_marriage_boycott/" title="McAllister, Neil (April 8, 2014). 'Gay marriage foes outraged at Mozilla CEO flap, call for boycott'. The Register. Retrieved June 5, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[23]</a></sup>.</p>
               </div>
             </div>
@@ -294,11 +293,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Mozilla</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">April 3rd, 2014</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">Brendan Eich stepped down as CEO and resigned from working at Mozilla; in his personal blog, Eich posted that "under the present circumstances, I cannot be an effective leader"<sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="Kim, Susana (April 3, 2014). 'Mozilla CEO Brendan Eich Resigns After Protests from Gay Marriage Supporters'. ABC News. Retrieved April 3, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[24]</a></sup><sup><a href="https://blog.mozilla.org/blog/2014/04/03/brendan-eich-steps-down-as-mozilla-ceo/" title="'Brendan Eich steps down as Mozilla CEO'. blog.mozilla.org. April 3, 2014. Retrieved April 8, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[25]</a></sup>.</p>
               </div>
             </div>
@@ -311,11 +310,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Brave Software</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">2016</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">Eich is the CEO of Brave Software, an Internet security company which has raised $2.5 million in early funding from <a href="https://en.wikipedia.org/wiki/Angel_investor" title="Angel investor" class="fw-bold text-decoration-none" target="_blank" rel="noopener">angel investors</a>. On January 20, 2016, the company released developer versions of its open-source 
                 <a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave (web browser)" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Brave</a> web browser <sup><a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave (web browser)" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[26]</a></sup>, which blocked ads and trackers and included a <a href="https://en.wikipedia.org/wiki/Micropayment" title="Micropayment" class="fw-bold text-decoration-none" target="_blank" rel="noopener">micropayments</a> system to offer users a choice between viewing selected ads or paying websites not to display them<sup><a href="https://brave.com/blog/how-to-fix-the-web/" title="'Building a Better Web'. Brave Software. Retrieved 29 January 2016." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[27]</a></sup>.</p>
               </div>
@@ -329,11 +328,11 @@
               <div class="card-header between px-2">
                 <h2 class="fw-bold small mb-0">Brave Software</h2>
                 <p class="fw-bold mb-0">
-                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
                   <span class="small ml-2">May 31st, 2017</span>
                 </p>
               </div>
-              <div class="card-body px-2">
+              <div class="card-body px-2 py-2">
                 <p class="fs-6 mb-0">At Brave Software, Eich co-created the Basic Attention Token (BAT), a cryptocurrency designed for use in the Brave browser. BAT launched its ICO and raised $35 million<sup><a href="https://techcrunch.com/2017/06/01/brave-ico-35-million-30-seconds-brendan-eich/" title="Former Mozilla CEO raises $35M in under 30 seconds for his browser startup Brave" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[28]</a></sup>.</p>
               </div>
             </div>
@@ -346,9 +345,9 @@
       <!-- start of blockquote section -->
       <blockquote cite="https://www.instagram.com/p/DC18t8igY0l/" class="center flex-column mx-auto p-3 mb-5">
         <p class="fs-2 fw-bold fst-italic position-relative text-center px-5">
-          <img src="img/svgs/quote.svg" width="32" height="32" class="quote-left position-absolute" alt="left quote icon">
+          <img src="img/svgs/quote.svg" width="32" height="32" class="quote-left position-absolute" alt="quote icon" loading="lazy">
           The web is the most important platform, and <span>JavaScript</span> is it's language.
-          <img src="img/svgs/quote.svg" width="32" height="32" class="quote-right position-absolute" alt="right quote icon">
+          <img src="img/svgs/quote.svg" width="32" height="32" class="quote-right position-absolute" alt="quote icon" loading="lazy">
         </p>
         <cite><span class="fs-2 fst-normal fw-bold">Brendan Eich</span></cite>
       </blockquote>
@@ -416,7 +415,7 @@
       <p class="lead fw-bold m-0"><a href="http://ralitsataylor.github.io/modern-portfolio/" class="fw-bold text-decoration-none" target="_blank" rel="noopener">&#60;Ralitsa Taylor&#47;&#62;</a> <span class="fw-bold">&copy; 2025</span></p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js" defer></script> -->
     <script src="js/btn-script-min.js" defer></script>
 
   </body>
