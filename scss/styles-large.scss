@@ -1,0 +1,81 @@
+/** media queries for responsive design **/
+@media (min-width: 768px) {
+  #main {
+    /* styling text for smaller screens */
+    .fs-6 { 
+      font-size: 1.25rem !important; /* 20px */
+    }
+    .small { 
+      font-size: 1.125rem !important; /* 18px */
+    }
+    /** Timeline styles **/
+    .main-timeline-content {
+      /* The actual timeline (the vertical ruler) */
+      &::after {
+        content: "";
+        left: 50%;
+      }
+      /* Container around content */
+      .timeline-content {
+        width: 50%;
+        /* The circles on the timeline */
+        .timeline-dot {
+          left: unset;
+        }
+        /* Place the container to the left */
+        &.left-side {
+          left: 0;
+          padding: 0 2.5rem 1.25rem 0; /* 0 40px 20px 0 */
+          .card {
+            &::before {
+              right: -.625rem; /* -10px */
+              transform: rotateY(0deg); 
+            }
+          }
+        }
+        /* Place the container to the right */
+        &.right-side {
+          left: 50%;
+          padding: 0 0 1.25rem 2.5rem; /* 0 0 20px 40px */
+          /* The circles on the timeline */
+          .timeline-dot {
+            left: -.625rem; /* -10px */ 
+          }
+          .card {
+            &::before {
+              left: -.625rem; /* -10px */ 
+              transform: rotateY(180deg);
+            }
+          }
+        }
+        &.left-side, &.right-side {
+          .card {
+            .clock-icon {
+              margin-bottom: .25rem; /* 4px */
+            }
+          }
+        }
+      }
+    }
+    /** Social Links Section styles **/
+    .social-links {
+      gap: 2rem !important;
+      div {
+        height: var(--el-size);
+        width: var(--el-size);
+        svg {
+          width: 2.5rem; /* 40px */
+          height: 2.5rem; /* 40px */
+        }
+        a { 
+          padding: .65rem; /* 10.4px */
+        }
+      }
+    }
+  }
+}
+
+/** media queries for responsive design **/
+@media (min-width: 1200px) {
+  .fs-2 { font-size: 1.5rem !important; }
+}
