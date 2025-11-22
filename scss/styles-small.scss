@@ -1,0 +1,268 @@
+/** global classes styling and variables definitions **/
+:root {
+  --primary: #000000;
+  --inverted: #ffffff;
+  --light-grey: #948a82;
+  --yellow: #ffe32d;
+  --blue: #000080;
+  --border: 3px solid var(--primary);
+  --transition: .5s;
+  --el-size: 4rem;
+}
+
+@mixin easeOut { 
+  transition: all .5s ease-out; 
+}
+
+@mixin thickBoxShadow { 
+  box-shadow: 0 .625rem 3.125rem .625rem rgba(0, 0, 0, .5); /* 0 10px 50px 10px */
+} 
+
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Raleway', Arial, sans-serif;
+  background-color: var(--light-grey); 
+}
+
+a { 
+  color: var(--blue); 
+  &:hover, &:focus { 
+    text-decoration: underline !important; 
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/** .scrollToTop button styling **/
+.scrollToTop {
+  width: var(--el-size);
+  height: var(--el-size);
+  cursor: pointer;
+  bottom: 50rem; /* 800px */
+  right: 1.25rem; /* 20px */
+  z-index: 100000;
+  border: var(--border);
+  background-color: var(--yellow);
+  visibility: hidden;
+  opacity: 0;
+  &.active { 
+    visibility: visible; 
+    opacity: 1; 
+    bottom: 25%; 
+  }
+  transform: translateY(30%);
+  transition: var(--transition);
+  @include thickBoxShadow;
+  &:hover, &:focus { 
+    background-color: var(--inverted); 
+  }
+}
+
+/** #main styling **/
+#main {
+  overflow-x: hidden;
+  background-color: var(--light-grey);
+}
+
+/** Hero Section styles **/
+.hero-container {
+  border: var(--border);
+  background-color: var(--inverted);
+  @include thickBoxShadow;
+  img {
+    object-fit: cover;
+    border: var(--border);
+    @include thickBoxShadow;
+  }
+  .hero-caption {
+    color: var(--primary);
+    border-top: var(--border);
+    background-color: var(--yellow);
+    border-bottom-left-radius: .85rem; /* 13.6px */
+    border-bottom-right-radius: .85rem; /* 13.6px */
+  }
+}
+
+/** Timeline styles **/
+.timeline-container {
+  // Prevent layout shifts in timeline
+  min-height: 56.25rem; /* 900px */
+  .main-timeline-content {
+    /* The actual timeline (the vertical ruler) */
+    &::after {
+      content: "";
+      top: 0;
+      left: 50%;
+      left: .375rem; /* 6px */
+      bottom: 0;
+      width: .1875rem; /* 3px */
+      margin-left: -.1875rem; /* -3px */
+      position: absolute;
+      background-color: var(--primary);
+    }
+    /* Container around content */
+    .timeline-content {
+      width: 100%;
+      /* Make sure that all arrows are pointing leftwards */
+      &::before {
+        left: 2.875rem; /* 46px */
+        border: var(--border);
+        border-width: .625rem .625rem .625rem 0; /* 10px 10px 10px 0; */
+        border-color: transparent var(--primary) transparent transparent;
+      }
+      /* The circles on the timeline */
+      .timeline-dot {
+        content: "";
+        width: 1.0625rem; /* 17px */
+        height: 1.0625rem; /* 17px */
+        top: .875rem; /* 14px */
+        right: -.4375rem; /* -7px */
+        left: -.25rem; /* -4px */
+        z-index: 1;
+        background-color: var(--primary);
+      }
+      /* Place the container to the left */
+      &.left-side {
+        .card {
+          &::before {
+            right: 100%;
+            transform: rotateY(180deg);
+          }
+        }
+      }
+      /* Place the container to the right */
+      &.right-side {
+        .card {
+          &::before {
+            left: -.625rem; /* -10px */ 
+            transform: rotateY(180deg);
+          }
+        }
+      }
+      &.left-side, &.right-side {
+        left: 0;
+        padding: 0 0 1.25rem 1.875rem; /* 0 0 20px 30px */
+        &::after {
+          left: -.5rem; /* -8px */
+        }
+        .card {
+          border: .1875rem solid var(--primary); /* 3px */
+          background-color: var(--inverted);
+          // Prevent layout shifts in timeline
+          min-height: 5rem; /* 80px */
+          /* Add arrows to the left and right container */
+          &::before {
+            content: " ";
+            position: absolute;
+            top: .625rem; /* 10px */ 
+            z-index: 1;
+            border: var(--border);
+            border-width: .625rem 0 .625rem .625rem; /* 10px 0 10px 10px */
+            border-color: transparent transparent transparent var(--primary);
+          }
+          .card-header {
+            background-color: var(--yellow);
+            border-color: var(--primary);
+            border-width: .1875rem; /* 3px */
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/** blockquote styling **/
+blockquote {
+  p, cite {  
+    color: var(--primary); 
+  }
+  span { 
+    color: var(--inverted); 
+  }
+  .quote-left {
+    left: -1rem;
+    top: -1rem;
+  }
+  .quote-right {
+    right: -1rem;
+    bottom: -1rem;
+    transform: rotate(180deg);
+  }
+}
+
+/** .socials styling **/
+.socials-container { 
+  overflow: hidden;
+  h3 { 
+    color: var(--primary); 
+  }
+  .social-links {
+    max-width: 30rem; /* 480px */
+    gap: .75rem; /* 12px */
+    div {
+      background-color: var(--inverted);
+      border: .1875rem solid var(--yellow); /* 3px */
+      width: 3rem; /* 48px */
+      height: 3rem; /* 48px */
+      @include easeOut;
+      /* Bootstrap icons */
+      &:hover, &:focus {
+        transform: translateY(-25%);
+        transition: var(--transition);
+        background-color: var(--primary);
+        svg {
+          path {
+            fill: var(--inverted);
+          }
+        }
+      }
+      a { 
+        color: var(--primary);
+        padding: .45rem; /* 7.2px */ 
+      }
+    }
+  }
+  /** .wiki-ref styling **/
+  .wiki-ref { 
+    .wiki-link { 
+      color: var(--inverted); 
+    }
+  }
+}
+
+/** footer styling **/
+#footer {
+  background-color: var(--yellow);
+  border: var(--border);
+  p {
+    color: var(--primary);
+    a {
+      color: var(--blue);
+    }
+  }
+}
