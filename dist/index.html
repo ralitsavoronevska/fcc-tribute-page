@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC: Build a Tribute Page</title>
+    <meta name="theme-color" content="#ffe32d">
+    <meta name="description" content="FCC: Build a Tribute Page">
+    <link rel="canonical" href="https://ralitsavoronevska.github.io/fcc-tribute-page/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ralitsavoronevska.github.io/fcc-tribute-page/">
+    <meta property="og:title" content="FCC: Build a Tribute Page">
+    <meta property="og:description" content="FCC: Build a Tribute Page">
+    <meta property="og:image" content="https://ralitsavoronevska.github.io/fcc-tribute-page/dist/img/fcc-tribute-page-desktop-preview.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ralitsavoronevska.github.io/fcc-tribute-page/">
+    <meta name="twitter:title" content="FCC: Build a Tribute Page">
+    <meta name="twitter:description" content="FCC: Build a Tribute Page">
+    <meta name="twitter:image" content="https://ralitsavoronevska.github.io/fcc-tribute-page/dist/img/fcc-tribute-page-desktop-preview.png">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="img/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicons/android-chrome-512x512.png">
+
+    <!-- Preload Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v37/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Preload hero image -->
+    <link rel="preload" href="img/hero.webp" as="image" type="image/webp" fetchpriority="high">
+
+    <!-- Main stylesheets: Bootstrap and my own styles -->
+    <link rel="stylesheet" href="purged-bootstrap.min.css" fetchpriority="high">
+    <link rel="stylesheet" href="css/styles-small.css">
+    <link rel="stylesheet" href="css/styles-large.css" media="(min-width: 768px)">
+
+    <!-- Inline critical CSS for hero and LCP elements -->
+    <style>
+      .fst-normal { font-style: normal !important; }
+      .fw-normal { font-weight: 400 !important; }
+      .m-0 { margin: 0 !important; }
+      .p-0 { padding: 0 !important; }
+      .lead { font-size: 1.25rem; }
+      @media (max-width: 767px) {
+        .hero-card.lead { font-size: 1rem; }
+      }
+    </style>
+
+    <!-- noscript fallbacks -->
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap">
+    </noscript>
+  </head>
+
+  <body class="fst-normal fw-normal">
+
+    <div class="scrollToTop center position-fixed rounded-circle">
+      <img src="img/svgs/home-btn.svg" width="32" height="32" id="home-btn" alt="Home button" loading="lazy">
+    </div>
+
+    <main id="main" class="mx-auto p-3">
+
+      <!-- start of hero section -->
+      <div class="hero-container text-center rounded-4 w-100 mw-100 m-0 p-0">
+        <div class="row mx-auto">
+          <div class="card hero-card center rounded-4 border-0 w-100 mw-100 mx-auto p-0" id="img-div">
+            <img src="img/hero.webp" width="180" height="180" class="d-block rounded-circle my-2" id="image" alt="Brendan Eich" loading="eager">
+            <div class="card-body w-100 mw-100 p-0">
+              <h1 class="fs-2 fw-bold mb-0" id="title">Brendan Eich</h1>
+              <p class="lead mb-2">
+                <a href="https://www.nytimes.com/1996/09/09/business/part-artist-part-hacker-and-full-time-programmer.html" title="Lohr, Steve, 1996-09-09, The New York Times, Retrieved 2017-06-content9" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Part Artist, Part Hacker &amp; <span>Full-Time Programmer</span></a>
+              </p>
+              <div class="hero-caption center p-3" id="img-caption">
+                <p class="lead fw-normal p-0 m-0">
+                  <span class="fw-bold">Brendan Eich</span> is an American computer programmer and technology executive. He created the <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript" class="fw-bold text-decoration-none" target="_blank" rel="noopener">JavaScript</a> programming language and co-founded the <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a> project <sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="ABC News: Mozilla CEO Resigns After Calif. Gay Marriage Ban Campaign Donation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[1]</a></sup>, the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a> and the <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation.</a>
+                </p>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of hero section -->
+
+      <!-- start of timeline -->
+      <div class="timeline-container py-5">
+        <div class="main-timeline-content position-relative">
+
+          <!-- Timeline item 1 : July 4th, 1961 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Birth</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">July 4th, 1961</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">Born in Pittsburgh, Pennsylvania, U.S. Brendan Eich grew up in Palo Alto.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 2 : 1979 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Early Education</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">1979</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">He attended <a href="https://en.wikipedia.org/wiki/Ellwood_P._Cubberley_High_School" title="Ellwood P. Cubberley High School" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Ellwood P. Cubberley High School</a>, graduating in the class of 1979. Eich received his bachelor's degree in mathematics and computer science at <a href="https://en.wikipedia.org/wiki/Santa_Clara_University" title="Santa Clara University" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Santa Clara University</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 3 : 1985 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Master's Degree</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">1985</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">He received his master's degree in 1985 from the <a href="https://en.wikipedia.org/wiki/University_of_Illinois_at_Urbana%E2%80%93Champaign" title="University of Illinois at Urbana-Champaign" class="fw-bold text-decoration-none" target="_blank" rel="noopener">University of Illinois at Urbana-Champaign</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 4 : 1985 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Career start</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">1985</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">Eich started his career at <a href="https://en.wikipedia.org/wiki/Silicon_Graphics" title="Silicon Graphics" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Silicon Graphics</a>, working for 7 years on operating system and network code. He then worked for 3 years at <a href="https://en.wikipedia.org/wiki/MicroUnity" title="MicroUnity Systems Engineering" class="fw-bold text-decoration-none" target="_blank" rel="noopener">MicroUnity Systems Engineering</a> writing <a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)" title="microkernel" class="fw-bold text-decoration-none" target="_blank" rel="noopener">microkernel</a> and <a href="https://en.wikipedia.org/wiki/Digital_signal_processor" title="Digital signal processor" class="fw-bold text-decoration-none" target="_blank" rel="noopener">DSP</a> code, and doing the first <a href="https://en.wikipedia.org/wiki/MIPS_architecture"
+                  title="MIPS architecture" class="fw-bold text-decoration-none" target="_blank" rel="noopener">MIPS</a> <a href="https://en.wikipedia.org/wiki/R4000" title="R4000" class="fw-bold text-decoration-none" target="_blank" rel="noopener">R4000</a> port of <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection" class="fw-bold text-decoration-none" target="_blank" rel="noopener">GCC</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 5 : 1995 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Netscape && JavaScript</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">1995</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">He started work at <a href="https://en.wikipedia.org/wiki/Netscape" title="Netscape" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Netscape Communications Corporation</a> in April 1995. Eich originally joined intending to put <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Scheme</a> "in the browser"<sup><a href="https://books.google.bg/books?id=3b40AwAAQBAJ&pg=PT32&redir_esc=y#v=onepage&q&f=false" title="Saternos, Casimir (2014-03-28). Client-Server Web Apps with JavaScript and Java." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[4]</a></sup>, but his Netscape superiors insisted that the language’s syntax resemble that of <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" title="Java" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Java</a>. The result was a language that had much of the functionality of Scheme, the object orientation of Self, and the syntax of Java. The first version was completed in ten days in order to accommodate the Navigator 2.0 Beta release schedule<sup><a href="https://www.computer.org/csdl/magazine/co/2012/02/mco2012020007/13rRUy08MzA" title="Severance, Charles (February 2012). 'JavaScript: Designing a Language in 10 Days' (PDF). Computer." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[5]</a></sup>, and was called Mocha, but renamed LiveScript in September 1995 and later JavaScript in the same month<sup><a href="https://www.quirksmode.org/js/intro.html" title="JavaScript: General introduction" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[6]</a></sup>. Eich continued to oversee the development of <a href="https://en.wikipedia.org/wiki/SpiderMonkey" title="SpiderMonkey" class="fw-bold text-decoration-none" target="_blank" rel="noopener">SpiderMonkey</a>, the specific implementation of JavaScript in Navigator<sup><a href="https://brendaneich.com/2011/06/new-javascript-engine-module-owner/" title="Eich, Brendan (June 21, 2011). 'New JavaScript Engine Module Owner'. BrendanEich.com." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[7]</a></sup>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 6 : 1998 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">1998</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">In early 1998, Eich co-founded the
+                <a href="https://en.wikipedia.org/wiki/Mozilla" title="Mozilla" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla</a> project with <a href="https://en.wikipedia.org/wiki/Jamie_Zawinski" title="Jamie Zawinski" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Jamie Zawinski</a> and others, creating the mozilla.org website, which was meant to manage open-source contributions to the Netscape source code. He served as Mozilla's chief <a href="https://en.wikipedia.org/wiki/Systems_architect" title="Systems architect" class="fw-bold text-decoration-none" target="_blank" rel="noopener">architect</a>.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Timeline item 7 : 1999 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">1999</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0"><a href="https://en.wikipedia.org/wiki/AOL" title="AOL" class="fw-bold text-decoration-none" target="_blank" rel="noopener">AOL</a> bought Netscape in 1999.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 8 : 2003 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">July 2003</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">After AOL shut down the Netscape browser unit, Eich helped spin out the <a href="https://en.wikipedia.org/wiki/Mozilla_Foundation" title="Mozilla Foundation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Foundation</a><sup><a href="https://www-archive.mozilla.org/press/mozilla-2005-08-03.html" title="Mozilla Foundation Forms New Organization to Further the Creation of Free, Open Source Internet Software, Including the Award-Winning Mozilla Firefox Browser. Mozilla Foundation. 2005-08-03. Retrieved 2011-02-12. Brendan Eich, a co-founder and long-time technical leader of the Mozilla project, will become the chief technical officer of the Mozilla Corporation." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[9]</a></sup>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 9 : 2005 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">August 2005</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">After serving as Lead Technologist and as a member of the Board of Directors of the Mozilla Foundation, Eich became <a href="https://en.wikipedia.org/wiki/Chief_technology_officer" title="Chief Technology Officer" class="fw-bold text-decoration-none" target="_blank" rel="noopener">CTO</a> of the newly founded <a href="https://en.wikipedia.org/wiki/Mozilla_Corporation" title="Mozilla Corporation" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Mozilla Corporation</a>, meant to be the Mozilla Foundation's for-profit arm.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 10 : 2011 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">2011</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">Eich continued to "own" the Mozilla SpiderMonkey module, its JavaScript engine, until he passed on the ownership of it in 2011.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 11 : March 24th, 2014 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">March 24th, 2014</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">Eich was promoted to CEO of Mozilla Corporation<sup><a href="https://blog.mozilla.org/blog/2014/03/24/mozilla-leadership-changes/" title="'Leadership Changes' (blog). Mozilla. March 24, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[10]</a></sup>. <a href="https://en.wikipedia.org/wiki/Gary_Kovacs" title="Gary Kovacs" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Gary Kovacs</a>, <a href="https://en.wikipedia.org/wiki/John_Lilly_(computer_scientist)" title="John Lilly" class="fw-bold text-decoration-none" target="_blank" rel="noopener">John Lilly</a> and <a href="https://en.wikipedia.org/wiki/Ellen_Siminoff" title="Ellen Siminoff" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Ellen Siminoff</a> resigned from the Mozilla board prior to the appointment, some anonymously expressing disagreements with Eich's strategy and their desire for a CEO with experience in the mobile industry<sup><a href="https://arstechnica.com/information-technology/2014/03/three-mozilla-board-members-including-two-former-ceos-step-down/" title="Machkovech, Sam (March 28, 2014). 'Three Mozilla board members—including former CEOs—step down [Updated]'. Ars Technica." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[14]</a></sup>. Some employees of Mozilla Foundation (a separate organization from Mozilla Corporation) tweeted calls for his resignation, with reference to his donation of $1,000 to <a href="https://en.wikipedia.org/wiki/2008_California_Proposition_8" title="2008 California Proposition 8" class="fw-bold text-decoration-none" target="_blank" rel="noopener">California Proposition 8</a>, which called for the banning of <a href="https://en.wikipedia.org/wiki/Same-sex_marriage_in_California" title="Same-sex marriage in California" class="fw-bold text-decoration-none" target="_blank" rel="noopener">same-sex marriage in California</a><sup><a href="https://blog.mozilla.org/blog/2014/04/03/brendan-eich-steps-down-as-mozilla-ceo/" title="Baker, Mitchell (April 3, 2014). 'Brendan Eich Steps Down as Mozilla CEO'. The Mozilla Blog." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[15]</a></sup><sup><a href="https://blog.mozilla.org/blog/2014/04/05/faq-on-ceo-resignation/" title="'FAQ on CEO Resignation'. Mozilla. April 5, 2014. Retrieved April 6, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[16]</a></sup>.Eich stood by his decision to fund the campaign, but wrote on his blog that he was sorry for “causing pain” and pledged to promote equality at Mozilla<sup><a href="https://brendaneich.com/2014/03/inclusiveness-at-mozilla/" title="'Brendan Eich'. brendaneich.com." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[17]</a></sup>. Some of the activists created an online campaign against Eich, with online dating site <a href="https://en.wikipedia.org/wiki/OkCupid" title="OkCupid" class="fw-bold text-decoration-none" target="_blank" rel="noopener">OkCupid</a> automatically displaying a message to Firefox users with information about Eich's donation, and suggesting that users switch to a different browser (though giving them a link to continue with Firefox)<sup><a href="https://notices.californiatimes.com/gdpr/latimes.com/" title="Netburn, Deborah (2012-04-04). 'Brendan Eich's Prop. 8 contribution gets Twittersphere buzzing'. LA Times. Retrieved 2012-04-17." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[18]</a></sup><sup><a href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/online-dating-site-okcupid-calls-for-firefox-boycott-to-protest-at-anti-gay-marriage-boss-9226904.html" title="Johnston, Ian (April 1, 2014). 'OkCupid calls for Firefox boycott to protest anti-gay marriage CEO Brendan Eich'. Independent. Retrieved June 5, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[19]</a></sup><sup><a href="https://www.advocate.com/business/technology/2014/03/26/mozilla-ceo-responds-antigay-allegations" title="Byrdum, Sunnivie (March 26, 2014). 'OkCupid calls for Firefox boycott to protest anti-gay marriage CEO Brendan Eich'. The Advocate." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[20]</a></sup>. Others at the Mozilla Corporation spoke out on their blogs in his favor<sup><a href="https://arstechnica.com/business/2014/03/mozilla-employees-to-brendan-eich-step-down/" title="Machkovech, Sam (March 27, 2014). 'Mozilla employees tell Brendan Eich he needs to 'step down''. Ars Technica. Retrieved March 28, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[21]</a></sup><sup><a href="https://subfictional.com/on-brendan-eich-as-ceo-of-mozilla/" title="Koehler, Christie (March 24, 2014). 'On Brendan Eich as CEO of Mozilla'. Subfictional Studios. Retrieved April 7, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[22]</a></sup>. Board members wanted him to stay in the company in a different role<sup><a href="https://www.theregister.co.uk/Print/2014/04/08/mozilla_anti_gay_marriage_boycott/" title="McAllister, Neil (April 8, 2014). 'Gay marriage foes outraged at Mozilla CEO flap, call for boycott'. The Register. Retrieved June 5, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[23]</a></sup>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 12 : April 3rd, 2014 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Mozilla</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">April 3rd, 2014</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">Brendan Eich stepped down as CEO and resigned from working at Mozilla; in his personal blog, Eich posted that "under the present circumstances, I cannot be an effective leader"<sup><a href="https://abcnews.go.com/Business/mozilla-ceo-resigns-calif-gay-marriage-ban-campaign/story?id=23181711" title="Kim, Susana (April 3, 2014). 'Mozilla CEO Brendan Eich Resigns After Protests from Gay Marriage Supporters'. ABC News. Retrieved April 3, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[24]</a></sup><sup><a href="https://blog.mozilla.org/blog/2014/04/03/brendan-eich-steps-down-as-mozilla-ceo/" title="'Brendan Eich steps down as Mozilla CEO'. blog.mozilla.org. April 3, 2014. Retrieved April 8, 2014." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[25]</a></sup>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 13 : 2016 -->
+          <div class="timeline-content position-relative left-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card left">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Brave Software</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">2016</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">Eich is the CEO of Brave Software, an Internet security company which has raised $2.5 million in early funding from <a href="https://en.wikipedia.org/wiki/Angel_investor" title="Angel investor" class="fw-bold text-decoration-none" target="_blank" rel="noopener">angel investors</a>. On January 20, 2016, the company released developer versions of its open-source 
+                <a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave (web browser)" class="fw-bold text-decoration-none" target="_blank" rel="noopener">Brave</a> web browser <sup><a href="https://en.wikipedia.org/wiki/Brave_(web_browser)" title="Brave (web browser)" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[26]</a></sup>, which blocked ads and trackers and included a <a href="https://en.wikipedia.org/wiki/Micropayment" title="Micropayment" class="fw-bold text-decoration-none" target="_blank" rel="noopener">micropayments</a> system to offer users a choice between viewing selected ads or paying websites not to display them<sup><a href="https://brave.com/blog/how-to-fix-the-web/" title="'Building a Better Web'. Brave Software. Retrieved 29 January 2016." class="fw-bold text-decoration-none" target="_blank" rel="noopener">[27]</a></sup>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 14 : May 31st, 2017 -->
+          <div class="timeline-content position-relative right-side">
+            <div class="timeline-dot position-absolute rounded-circle"></div>
+            <div class="card right">
+              <div class="card-header between px-2">
+                <h2 class="fw-bold small mb-0">Brave Software</h2>
+                <p class="fw-bold mb-0">
+                  <img src="img/svgs/clock-history.svg" width="16" height="16" class="clock-icon" alt="clock history icon" loading="lazy">
+                  <span class="small ml-2">May 31st, 2017</span>
+                </p>
+              </div>
+              <div class="card-body px-2 py-2">
+                <p class="fs-6 mb-0">At Brave Software, Eich co-created the Basic Attention Token (BAT), a cryptocurrency designed for use in the Brave browser. BAT launched its ICO and raised $35 million<sup><a href="https://techcrunch.com/2017/06/01/brave-ico-35-million-30-seconds-brendan-eich/" title="Former Mozilla CEO raises $35M in under 30 seconds for his browser startup Brave" class="fw-bold text-decoration-none" target="_blank" rel="noopener">[28]</a></sup>.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- end of timeline -->
+
+      <!-- start of blockquote section -->
+      <blockquote cite="https://www.instagram.com/p/DC18t8igY0l/" class="center flex-column mx-auto p-3 mb-5">
+        <p class="fs-2 fw-bold fst-italic position-relative text-center px-5">
+          <img src="img/svgs/quote.svg" width="32" height="32" class="quote-left position-absolute" alt="quote icon" loading="lazy">
+          The web is the most important platform, and <span>JavaScript</span> is it's language.
+          <img src="img/svgs/quote.svg" width="32" height="32" class="quote-right position-absolute" alt="quote icon" loading="lazy">
+        </p>
+        <cite><span class="fs-2 fst-normal fw-bold">Brendan Eich</span></cite>
+      </blockquote>
+      <!-- end of blockquote section -->
+
+      <!-- start of social links section -->
+      <section class="socials-container center flex-column text-center mb-0 pt-4" id="tribute-info">
+        <h3 class="fs-2 fw-bold">Want to know more about him?</h3>
+        <div class="social-links center my-5">
+
+          <div class="website-link rounded-circle">
+            <a href="https://brendaneich.com/" title="Visit Brendan Eich's Official Website" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
+              <svg width="28" height="28" aria-label="Link icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <title>Link icon</title>
+                <path fill="#000000" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.04 16.04 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.5 152.5 0 0 1 20.522 17.197M467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.5 152.5 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.04 16.04 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="fb-logo rounded-circle">
+            <a href="https://www.facebook.com/brendan.eich.1/" title="Visit Brendan Eich's Facebook Profile" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
+              <svg width="32" height="32" aria-label="Facebook" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                <title>Facebook icon</title>
+                <path fill="#000000" d="m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="twitter-logo rounded-circle">
+            <a href="https://twitter.com/BrendanEich/" title="Visit Brendan Eich's Twitter Profile" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
+              <svg width="28" height="28" aria-label="Twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <title>Twitter bird icon</title>
+                <path fill="#000000" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="instagram-logo rounded-circle">
+            <a href="https://www.instagram.com/brendan.eich/" title="Visit Brendan Eich's Instagram Profile" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
+              <svg width="30" height="30" aria-label="Instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram icon</title>
+                <path fill="#000000" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="mastodon-logo rounded-circle">
+            <a href="https://mastodon.social/@BrendanEich/" title="Visit Brendan Eich's Mastodon Profile" class="d-flex fw-bold text-decoration-none" target="_blank" rel="noopener">
+              <svg width="30" height="30" aria-label="Mastodon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <title>Mastodon icon</title>
+                <path fill="#000000" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.5 102.5 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5m-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+        
+        <h3 class="wiki-ref fs-2 fw-bold">Read more about him on <a href="https://en.wikipedia.org/wiki/Brendan_Eich/" title="Visit Brendan Eich's Wikipedia Page" class="wiki-link fw-bold text-decoration-none" id="tribute-link" target="_blank" rel="noopener">Wikipedia</a>.</h3>
+      </section>
+      <!-- end of social links section -->
+
+    </main>
+
+    <footer id="footer" class="center p-3">
+      <p class="lead fw-bold m-0"><a href="https://ralitsavoronevska.com/" class="fw-bold text-decoration-none" target="_blank" rel="noopener">&#60;Ralitsa Voronevska&#47;&#62;</a> <span class="fw-bold">&copy; 2025</span></p>
+    </footer>
+
+    <script src="js/btn-script-min.js" defer></script>
+
+  </body>
+</html>
